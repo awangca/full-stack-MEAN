@@ -1,5 +1,32 @@
 .box{
 
-	font-size: 34px;
+	color:red;
+	height: 1000px;
+	font-size: 15px;
+	width: 1300px;
 	text-align: center;
+/*	background-color: black;
+	background-image: url("tearful.png");
+	background-repeat: no-repeat;
+	background-position: 20px 30px;
+
+	/*background attachment*/
+	/*background-attachment: fixed;	*/
+
+	background:black url("tearful.png") repeat fixed;
+
+	
 }
+a{
+	color:yellow;
+	text-decoration: none;
+}
+
+a:hover{
+	color:red;
+	text-decoration: underline;
+}
+a:active{
+	color:pink;
+}
+

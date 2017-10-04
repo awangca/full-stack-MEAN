@@ -1,0 +1,15 @@
+ .Inp{
+
+ 	width: 280px;
+ 	height: 30px;
+ 	background:url("tearful.png") no-repeat left center;
+
+ }
+
+ li{
+ 	 /*remove the dot*/
+ 	 text-align: center;
+ 	 list-style: none;
+ 	 background: url("videoIcon.jpg") no-repeat 0px ;
+ 	 text-indent: 2em;
+ }
