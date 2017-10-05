@@ -1,0 +1,34 @@
+.nav{
+	height: 40px;
+	background: #eee;
+	border-top: 3px solid orange;
+	border-bottom: 1px  solid #aaa;
+
+}
+.nav-con{
+	width: 1000px;
+	background: #aaa;
+	height: 40px;
+	margin: 0px auto;
+	line-height: 40px;
+
+
+
+
+}
+
+a{
+ font: 15px/40px  microsoft yahei;
+ color: #eee;
+ display: inline-block;
+ height: 40px;
+ text-decoration: none;
+ padding: 0px 12px;
+
+}
+
+a:hover{
+
+	background-color: #999;
+	alignment-baseline: top;
+}
