@@ -1,0 +1,65 @@
+ .pinfo{
+ 	width: 208px;
+ 	height: 384px;
+ 	border:1px solid #cecece;
+ 	margin: 10px auto;
+
+ }	
+
+
+ .pinfo .title{
+ 	height: 25px;
+ 	padding-left: 9px;
+
+ 	line-height: 25px;
+ 	background-color: #ececec;
+
+ }
+
+ .pinfo .pic{
+ 	width: 180px;
+ 	height: 180px;
+ 	border:1px solid #cecece;
+ 	margin: 10px 0 11px 13px;
+ }
+
+ .pinfo .blink{
+
+ 	height:27px; 
+ 	text-align: center;
+ }
+
+.pinfo .weibo{
+
+	height: 30px;
+	text-align: center;
+	border-bottom: 1px dotted #d1d1d1;
+	margin-bottom: 20px;
+
+
+}
+ .pinfo .weibo input{
+
+ 	height:23px;
+ 	width: 68px;
+ 	text-align: center;
+ 	background: url("vb.jpg") no-repeat;
+
+
+
+ }
+
+
+ .pinfo .friend{
+
+ 	text-align: center;
+
+ }
+
+ .pinfo .friend input{
+
+ 	width: 67px;
+ 	height: 21px;
+ 	margin-bottom: 5px;
+ }
+

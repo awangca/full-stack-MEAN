@@ -17,7 +17,7 @@
 
 }
 
-a{
+.nav a{
  font: 15px/40px  microsoft yahei;
  color: #eee;
  display: inline-block;
@@ -31,4 +31,62 @@ a:hover{
 
 	background-color: #999;
 	alignment-baseline: top;
+}
+
+body, ul, li{
+
+	margin: 0;
+	padding: 0;
+}
+
+ul, li{
+list-style: none;
+margin-left: 10px;	
+margin-right: 10px;
+}
+
+li{
+	height: 30px;
+	border-bottom: 1px dashed #666;
+	line-height: 30px;
+	
+	padding: 0 15px;
+	background: url("tb.gif")  no-repeat left center;
+	padding-left: 16px;
+
+}
+
+li a{
+
+	text-decoration: none;
+}
+ul{
+	background-color: #fff;
+
+}
+
+.pets{
+
+	width: 260px;
+	height: 327px;
+	border:1px solid #009900;
+	margin: 10px auto;
+	background: url("bg.gif") ;
+
+}
+
+.pets .tips{
+
+	height: 23px;
+	margin: 10px 0px 5px 10px;
+	border-left:4px solid yellow;
+	font: 16px/23px microsoft yahei;
+	line-height: 23px;
+	padding-left: 11px;
+}
+
+.petLists{
+
+
+
 }
