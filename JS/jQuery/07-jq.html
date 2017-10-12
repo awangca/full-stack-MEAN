@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript"></script>
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		jQuery(function(){
+
+			//find(selector); 
+			var jqul=$("ul");
+			var jqli= jqul.find("li").css("background", "pink");
+
+			jqul.children("li").css("background","yellow");
+			jqul.children().eq(0).css("background", "red");
+			jqul.children().eq(0).next().css("background", "blue");
+			jqul.children().eq(0).siblings().css("background", "yellow");
+			console.log(jqul.children().children("ol").eq(0).parent());
+		});
+
+	</script>
+</head>
+<body>
+
+ <ul>
+ 		<li>  Nice weather </li>
+ 		<li class="clbox">  wildfire is expanding </li>
+ 		<span>  Ready for dinner </span>
+ 		<li id="idbox">  Bad weather </li>
+ 		<li>  wildfire is fully controlled </li>
+ 		<li>  Ready for breakfast </li>
+ 		<a  id= "box" href="#"> More </a>
+ 			<ol>
+ 				<li>Li inside ol</li>
+ 				<li>Li inside ol</li>
+ 				<li>Li inside ol</li>
+ 			</ol>
+
+ </ul>
+</body>
+</html>
