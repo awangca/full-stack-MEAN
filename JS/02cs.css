@@ -1,0 +1,46 @@
+*{
+   padding:0;
+   margin: 0;
+
+}
+
+.top-banner{
+	background-color: yellow;
+	height: 300px;
+}
+
+.w{
+
+	height: 300px;
+	width: 1200px;
+	text-align: center;
+	position: relative;
+	margin: 10px auto;	
+}
+
+img{
+	width: 1200px;
+	height: 300px;
+
+
+}
+
+
+a{
+	position: absolute;
+	top:5px; 
+	right:5px;
+	width: 20px;
+	height: 20px;
+	background-color: #eee;
+	color: #888;
+	text-decoration: none;
+	font:800 18px/20px;
+	text-align: center;
+
+}
+
+ .hide{
+
+	display: none !important;
+}

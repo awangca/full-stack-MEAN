@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{
+			height: 100px;
+			width: 1200px;
+			background-color: pink;
+			margin: 10px;
+			display: none;
+			
+		}
+	</style>
+</head>
+<body>
+	<button>Show</button>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+
+		// original JS
+		// var btn =document.getElementsByTagName("button")[0];
+		// var divArr = document.getElementsByTagName("div");
+
+		// btn.onclick = function(){
+
+		// 	for(var i=0; i<divArr.length;i++)
+		// 	{
+		// 		divArr[i].style.display = "block";
+		// 		divArr[i].innerHTML = "Black Friday Coming";
+		// 	}
+		// }
+
+		//JQuery
+
+		$(document).ready(function(){
+			// get element
+			var jqBtn = $("button");   // choosing by tag name
+			var jqDiv = $("div");
+
+			jqBtn.click(function(){
+				// alert(111);
+				jqDiv.show(2000).html(00110000);
+				// jqDiv.html("Can't believe it");
+
+			});
+
+
+		})
+
+	</script>
+</body>
+</html>
