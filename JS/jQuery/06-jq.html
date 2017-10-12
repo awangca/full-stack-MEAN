@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<link rel="stylesheet" type="text/css" href="06-jq.css">
+		<script type="text/javascript" src="jquery-3.2.1.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var inArr = document.getElementsByTagName('input');
+				var bd = $("body");
+
+				$(inArr[0]).click(function(){
+
+					bd.get(0).style.backgroundColor ="white";
+				});
+
+				$(inArr[1]).click(function(){
+
+					bd.get(0).style.backgroundColor ="black";
+				});
+
+
+
+
+			})
+			
+		</script>
+
+</head>
+<body>
+	<!-- <button>TurnOn</button>
+	<button>TurnOff</button> -->
+	<input type="button" value="ON" id="j_turnOn">
+	<input type="button" value="OFF" id="j_turnOff">
+	<br>
+	<img src="bookpage.png">
+</body>
+</html>

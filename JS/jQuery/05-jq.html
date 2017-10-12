@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var jqLi = $("li");
+			for(var i=0;i<jqLi.length;i++){
+				if(i%2===0)
+				{
+					jqLi[i].style.backgroundColor = "red";
+
+				}else{
+					jqLi[i].style.backgroundColor = "blue";
+				}
+			}
+
+
+		})
+
+	</script>
+</head>
+<body>
+	<ul>
+		<li>Awesome Day</li>
+		<li>Awesome Day</li>
+		<li>Awesome Day</li>
+		<li>Awesome Day</li>
+		<li>Awesome Day</li>
+		<li>Awesome Day</li>
+	</ul>
+</body>
+</html>
