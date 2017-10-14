@@ -15,7 +15,8 @@
 			jqul.children().eq(0).css("background", "red");
 			jqul.children().eq(0).next().css("background", "blue");
 			jqul.children().eq(0).siblings().css("background", "yellow");
-			console.log(jqul.children().children("ol").eq(0).parent());
+			// console.log(jqul.children().children("ol").eq(0).parent());
+			jqul.find("ol").children("#secLi").css("background", "red");
 		});
 
 	</script>
@@ -32,7 +33,7 @@
  		<a  id= "box" href="#"> More </a>
  			<ol>
  				<li>Li inside ol</li>
- 				<li>Li inside ol</li>
+ 				<li id="secLi">Li inside ol</li>
  				<li>Li inside ol</li>
  			</ol>
 

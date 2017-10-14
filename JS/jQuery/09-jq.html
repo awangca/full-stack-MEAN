@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="09-jq.css">
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var jqli_Odd=$("li:odd");
+			var jqli_Even=$("li:even");
+			// jqli_Odd.css("background", "red");
+			// jqli_Even.css("background", "yellow");
+
+			// counter and change color when mouse over
+			$("li").mouseenter(function(){
+
+				color =$(this).css("background","red");
+			})
+
+			$("li").mouseleave(function(){
+				$(this).css("background", "white");
+
+			})
+		})
+	</script>
+</head>
+<body>
+
+	<ul>
+		<li class="title">How Life Is For Life</li>
+		<li class="line1">Life is for life when</li>
+		<li class="line1">Some help other in danger</li>
+		<li class="line1">That is to serve when</li>
+		<li class="line1">They use their brain for other</li>
+		<li class="line1">And advance in body and mind</li>
+
+	</ul>
+
+</body>
+</html>

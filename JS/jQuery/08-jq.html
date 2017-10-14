@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<style type="text/css">
+
+	*{
+		margin:0px;
+		padding: 0px;
+	}
+
+	.wrap>ul>li{
+
+		float: left;
+		margin: 50px;
+		position: relative;
+
+	}
+	.wrap{
+
+		width: 1200px;
+		height: 149px;
+		margin:50px auto 0;
+		padding-left: 20px;
+		
+
+	}
+		.wrap li a{
+			display: inline-block;
+			width: 128px;
+			height: 128px;
+			font-size:22px;
+			text-align: center;
+			line-height: 128px;
+			margin: 0px;
+			color: yellow;
+			background-image: url("../img/greenbtn.png");
+
+		}
+		.wrap li{
+			width: 128px;
+			height: 128px;
+			margin-right: 300px;
+			padding: 0px;
+
+		}
+		.wrap li ul{
+ 			position: relative;
+ 			top: 0px;
+ 			display:none;
+
+		}
+
+		li{
+			list-style: none;
+		}
+
+
+
+
+	</style>
+
+	<script type="text/javascript">
+
+		// entry point
+		$(document).ready(function () {
+
+			// body...
+			var jqli=$(".wrap>ul>li");
+			jqli.mouseenter(function(){
+
+				// console.log(this);
+				// this.children[1].style.display ="block";
+				$(this).children("ul").show();
+
+			});
+
+			jqli.mouseleave(function(){
+
+				// console.log(this);
+				// this.children[1].style.display ="block";
+				$(this).children("ul").hide();
+
+			});
+			
+
+		})
+
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<ul>
+			<!-- menu one -->
+			<li>
+				<a  href="javascript:void(0);">Menu_One</a>
+				<ul>
+					<li> <a href="javascript:void(0);">Sub_One</a> </li>
+					<li> <a href="javascript:void(0);">Sub_Two</a> </li>
+					<li> <a href="javascript:void(0);">Sub_Three</a> </li>
+				</ul>
+			</li>
+			<!-- menu two -->
+			<li>
+				<a href="javascript:void(0);">Menu_Two</a>
+				<ul>
+					<li> <a href="javascript:void(0);">Sub_One</a> </li>
+					<li> <a href="javascript:void(0);">Sub_Two</a> </li>
+					<li> <a href="javascript:void(0);">Sub_Three</a> </li>
+				</ul>
+			</li>
+			<!--  //menu three -->
+			<li>
+				<a href="javascript:void(0);">Menu_Three</a>
+				<ul>
+					<li> <a href="javascript:void(0);">Sub_One</a> </li>
+					<li> <a href="javascript:void(0);">Sub_Two</a> </li>
+					<li> <a href="javascript:void(0);">Sub_Three</a> </li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
