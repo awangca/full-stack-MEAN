@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="10-jq.css">
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		jQuery(window).ready(function(){
+			$(".wrap").find("li").mouseenter(function(){
+
+				$(this).css("opacity",1).siblings("li").css("opacity",0.2);
+				// alert(1);
+			});
+
+			$(".wrap").find("li").mouseleave(function(){
+
+				$("li").css("opacity",1);
+			});
+		})
+
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<ul>
+			<li>  <a href="#"> <img src="C:\Users\AW\Desktop\FrontendHW\front-end\JS\img\10-jq\01.jpg"> </a> </li>
+			<li>  <a href="#"> <img src="C:\Users\AW\Desktop\FrontendHW\front-end\JS\img\10-jq\02.jpg"> </a> </li>
+			<li>  <a href="#"> <img src="C:\Users\AW\Desktop\FrontendHW\front-end\JS\img\10-jq\03.jpg"> </a> </li>
+			<li>  <a href="#"> <img src="C:\Users\AW\Desktop\FrontendHW\front-end\JS\img\10-jq\04.jpg"> </a> </li>
+			<li>  <a href="#"> <img src="C:\Users\AW\Desktop\FrontendHW\front-end\JS\img\10-jq\05.jpg"> </a> </li>
+			<li>  <a href="#"> <img src="C:\Users\AW\Desktop\FrontendHW\front-end\JS\img\10-jq\06.jpg"> </a> </li>
+
+
+
+		</ul>
+
+
+	</div>
+
+</body>
+</html>
