@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="11-jq.css">
+	<script type="text/javascript">
+		$(function(){
+
+			// click on span, to show 'div'
+			$(".parentWrap span").click(function(){
+
+				$(this).next().show();
+
+ 				$(this).parent("li").siblings("li").children("div").hide();
+			})
+		})
+	</script>
+</head>
+<body>
+	<ul class="parentWrap">
+		
+		<!-- menu list 1 -->
+		<li class="menuGroup">
+			<span class="groupTitle">List One</span>
+			<div>Infomation for L1</div>
+
+		</li>
+
+		<!-- menu list 2 -->
+		<li class="menuGroup">
+			<span class="groupTitle">List Two</span>
+			<div>Infomation for L2</div>
+
+		</li>
+
+		<!-- menu list 3 -->
+		<li class="menuGroup">
+			<span class="groupTitle">List Three</span>
+			<div>Infomation for L3</div>
+
+		</li>
+
+		<!-- menu list 4 -->
+		<li class="menuGroup">
+			<span class="groupTitle">List Four</span>
+			<div>Infomation for L4</div>
+
+		</li>
+
+
+	</ul>
+
+</body>
+</html>
