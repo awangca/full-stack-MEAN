@@ -4,7 +4,7 @@
 
 2. CSS
   
-3.JQuery
+3. JQuery
 
 
 ## back-end
