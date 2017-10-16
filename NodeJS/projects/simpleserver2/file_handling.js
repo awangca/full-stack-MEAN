@@ -24,10 +24,17 @@ var fs = require('fs');
 // fs.writeFileSync('file_handling_output.txt',readMe);
 
 //*******Part Three*******
+ // ***********async****************
 
-// fs.rmdirSync('stuff');
-fs.mkdir('stuff',function(){
-	fs.readFile('file_handling.txt','utf8',function(err,data){
-		fs.writeFile('./stuff/writeMe.txt',data);
-	});
-});
+
+// fs.mkdir('stuff',function(){
+// 	fs.readFile('file_handling.txt','utf8',function(err,data){
+// 		fs.writeFile('./stuff/writeMe.txt',data);
+// 	});
+// });
+
+//*******Part Four*******
+ // ***********remove a directroy and file****************
+ fs.unlink('./stuff/writeMe.txt',function(){
+ 	fs.rmdir('stuff');
+ });
