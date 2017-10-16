@@ -1,0 +1,142 @@
+<tbody class="sm-view-campaign-offers ng-scope" data-ng-repeat="(offerGroupIndex, offerGroup) in editingCtrl.lightningDeal.items.offersByASIN">
+
+        
+        <tr class="sm-view-campaign-offer selected" data-ng-class="{ 'ineligible': !offerGroup.containsEligible, 'ineligibleOfferOnly': offerGroup.displayItem.ineligibilityReasons.length > 0, 'selected': offerGroup.containsSelected }">
+            
+            <td class="sm-view-item-metadata-container sm-view-item-action-container" data-ng-class="{ 'sm-view-item-action-container': (editingCtrl.lightningDeal.items.offersByASIN.length > 1 || !offerGroup.containsEligible) }">
+                <!-- placeholder for removal option for variations (note that ineligible items cannot be toggled) -->
+
+                
+                <!-- ngIf: editingCtrl.lightningDeal.items.offersByASIN.length > 1 && editingCtrl.lightningDeal.items.checkIsItemAddable(offerGroupIndex) -->
+                <!-- ngIf: editingCtrl.lightningDeal.items.offersByASIN.length > 1 && editingCtrl.lightningDeal.items.checkIsItemRemovable(offerGroupIndex) --><div class="sm-view-item-remove-btn ng-scope" data-ng-if="editingCtrl.lightningDeal.items.offersByASIN.length > 1 &amp;&amp; editingCtrl.lightningDeal.items.checkIsItemRemovable(offerGroupIndex)" data-ng-click="editingCtrl.removeItem(offerGroupIndex)">
+                </div><!-- end ngIf: editingCtrl.lightningDeal.items.offersByASIN.length > 1 && editingCtrl.lightningDeal.items.checkIsItemRemovable(offerGroupIndex) -->
+
+                
+                
+                
+                
+                
+                <div class="a-popover-preload" id="a-popover-ineligiblePopover-2015004">
+                    This SKU does not meet the minimum requirements to be part of the Lightning Deal.
+                    <ul>
+                        <li data-ng-show="offerGroup.displayItem.validationErrorViews.indexOf('GENERIC_ERROR') >= 0" class="ng-hide">
+                            You have at least one error in your Lightning Deal. Fix the following before proceeding:
+                        </li>
+                        <li data-ng-show="offerGroup.displayItem.validationErrorViews.indexOf('ITEM_CONDITION') >= 0" class="ng-hide">
+                            Products must be new to be eligible for Lightning Deals. You'll need to remove any used products from the deal. 
+                        </li>
+                            
+                        <li data-ng-show="offerGroup.displayItem.validationErrorViews.indexOf('ASIN_RATING') >= 0" class="ng-hide">
+                            Some products do not meet the minimum star rating to qualify for this deal. Remove these products and resubmit the deal. 
+                        </li>
+                        <li data-ng-show="offerGroup.displayItem.validationErrorViews.indexOf('FULFILLMENT') >= 0" class="ng-hide">
+                            Products must be Prime eligible to qualify. You'll need to remove merchant-fulfilled items from the deal or change the fulfillment method to FBA.
+                        </li>
+                        <li data-ng-show="offerGroup.displayItem.validationErrorViews.indexOf('ITEM_PRICE_TOO_HIGH') >= 0" class="ng-hide">
+                            All included products must have a price less than their maximum deal price to run the deal. Lower the price and resubmit your deal.
+                        </li>
+                        <li data-ng-show="offerGroup.displayItem.validationErrorViews.indexOf('ITEM_QUANTITY_TOO_HIGH') >= 0" class="ng-hide">
+                            You are offering too many products. Reduce the quantity and try again. 
+                        </li>
+                        <li data-ng-show="offerGroup.displayItem.validationErrorViews.indexOf('ITEM_QUANTITY_TOO_LOW') >= 0" class="ng-hide">
+                            A product in your deal has a quantity that is too low. Increase the quantity to at least the minimum deal quantity or remove the product from the deal. 
+                        </li>
+                        <li data-ng-show="offerGroup.displayItem.validationErrorViews.indexOf('ITEM_INVENTORY_QUANTITY_TOO_LOW') >= 0" class="ng-hide">
+                            A product in your deal has inventory that is below the minimum deal quantity. Your inventory must meet or exceed the minimum proposed quantity for each product. Either increase the inventory or remove this product from your deal. 
+                        </li>
+                        <li data-ng-show="offerGroup.displayItem.validationErrorViews.indexOf('ITEM_INVALID_SCHEDULE') >= 0" class="ng-hide">
+                            This deal is no longer valid for the selected week. Select a new week to run the deal. 
+                        </li>
+                        <li data-ng-show="offerGroup.displayItem.validationErrorViews.indexOf('MISMATCHED_FULFILLMENT') >= 0" class="ng-hide">
+                            All products in the deal must be from a single fulfillment network. Make sure your ASINs are from the same network. 
+                        </li>
+                            
+                        <li data-ng-show="offerGroup.displayItem.validationErrorViews.indexOf('MIN_DEAL_VALUE') >= 0" class="ng-hide">
+                            Your total deal value is currently <span data-ng-bind="offerGroup.displayItem.dealPotential" class="ng-binding">507.98</span> and needs to be <span data-ng-bind="editingCtrl.lightningDeal.items.minDealVolume | currency" class="ng-binding"></span>. Try increasing the quantity of your products or adding additional child product variations to qualify.
+                        </li>
+                        <li data-ng-show="offerGroup.displayItem.validationErrorViews.indexOf('MAX_DEAL_VALUE') >= 0" class="ng-hide">
+                            All included products must have a price less than their maximum deal price to run the deal. Check the prices and resubmit the deal. 
+                        </li>
+                        <li data-ng-show="offerGroup.displayItem.validationErrorViews.indexOf('INVALID_ITEM') >= 0" class="ng-hide">
+                            Your deal contains an invalid SKU. Remove or change this SKU in MYI and try again. For more info, see "Make your products eligible for Lightning Deals" in Seller Central Help. 
+                        </li>
+                        <li data-ng-show="offerGroup.displayItem.validationErrorViews.indexOf('SERVICE_ERROR') >= 0" class="ng-hide">
+                            We are working to improve our systems; please refresh or try again in an hour.
+                        </li>
+                    </ul>
+                </div>
+                <!-- ngIf: offerGroup.getEligibleItems().length === 0 -->
+            </td>
+
+            
+            <td class="sm-view-product-details-image-container">
+                <img alt="" src="https://images-na.ssl-images-amazon.com/images/I/41Yx5h664-L._SCLZZZZZZZ___SS60_.jpg" data-ng-src="https://images-na.ssl-images-amazon.com/images/I/41Yx5h664-L._SCLZZZZZZZ___SS60_.jpg">
+            </td>
+            
+            <td class="sm-view-product-details-product-name-container">
+                <a data-ng-href="http://www.amazon.com/dp/B06ZZDF39G" data-ng-bind="offerGroup.displayItem.productName" class="ng-binding" href="http://www.amazon.com/dp/B06ZZDF39G">Vekibee Sonic Mole Repellent Pack of 4 Solar Powered Rodent Repellent Ultrasonic Pest Repeller Gopher Repeller Vole Chaser Pest Deterrent for Lawn Garden Yard Outdoor Pest Control</a>
+                <div data-ng-bind="offerGroup.displayItem.sku" class="ng-binding">2015004</div>
+                
+                <!-- ngIf: offerGroup.items.length > 1 -->
+            </td>
+            
+            <td>
+                <div data-ng-bind="offerGroup.displayItem.sellerPrice | currency" class="ng-binding">$59.98</div>
+            </td>
+            
+            <td>
+                <div data-ng-bind="offerGroup.displayItem.sellerQuantity" class="sm-view-seller-quantity ng-binding">1029</div>
+                <!-- warning popover in case on-hand inventory is less than committed -->
+                
+                
+                
+                
+                <!-- ngIf: offerGroup.containsSelected && offerGroup.displayItem.sellerQuantity < offerGroup.displayItem.dealQuantity.minValue -->
+            </td>
+            
+            <td class="sm-column-with-numeric-input">
+                
+                <!-- ngIf: offerGroup.displayItem.dealPrice.isEditable --><div data-ng-if="offerGroup.displayItem.dealPrice.isEditable" class="ng-scope">
+                    <!-- ngIf: offerGroup.displayItem.ineligibilityReasons.length === 0 --><div data-ng-if="offerGroup.displayItem.ineligibilityReasons.length === 0" class="ng-scope">
+                        <input type="text" name="items[1].dealPrice" class="a-input-text sm-editable-price ng-untouched ng-valid ng-isolate-scope ng-valid-required ng-valid-min-value ng-valid-max-value ng-valid-numeric ng-dirty ng-valid-parse" data-currency-input="" data-ignore-validation="false" data-indicate-invalid-input="" data-ng-change="editingCtrl.updateItemContribution(offerGroupIndex); editingCtrl.persistItemStateForSchedule(offerGroupIndex)" data-ng-disabled="!offerGroup.displayItem.isSelected" data-ng-model="offerGroup.displayItem.dealPrice.value" data-validation="offerGroup.displayItem.dealPrice">
+                        
+                        <div class="text-right">
+                            <span class="a-color-tertiary">
+                                <span data-ng-bind="offerGroup.displayItem.dealPrice.maxValue | currency" class="ng-binding">$46.18</span>
+                            </span>
+                        </div>
+                    </div><!-- end ngIf: offerGroup.displayItem.ineligibilityReasons.length === 0 -->
+                    <!-- ngIf: offerGroup.displayItem.ineligibilityReasons.length > 0 -->
+                </div><!-- end ngIf: offerGroup.displayItem.dealPrice.isEditable -->
+                
+                <!-- ngIf: !offerGroup.displayItem.dealPrice.isEditable -->
+            </td>
+            
+            <td class="sm-column-with-numeric-input">
+                
+                <!-- ngIf: offerGroup.displayItem.dealQuantity.isEditable --><div data-ng-if="offerGroup.displayItem.dealQuantity.isEditable" class="ng-scope">
+                    <!-- ngIf: offerGroup.displayItem.ineligibilityReasons.length === 0 --><div data-ng-if="offerGroup.displayItem.ineligibilityReasons.length === 0" class="ng-scope">
+                        <input type="text" name="items[1].dealQuantity" class="a-input-text sm-editable-quantity ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-required ng-valid-min-value ng-valid-max-value ng-valid-numeric ng-valid-integer" data-ignore-validation="false" data-indicate-invalid-input="" data-ng-change="editingCtrl.updateItemContribution(offerGroupIndex); editingCtrl.persistItemStateForSchedule(offerGroupIndex)" data-ng-disabled="!offerGroup.displayItem.isSelected" data-ng-model="offerGroup.displayItem.dealQuantity.value" data-validation="offerGroup.displayItem.dealQuantity">
+                        
+                        <div class="text-right">
+                            <span class="a-color-tertiary">
+                                <span data-ng-bind="offerGroup.displayItem.dealQuantity.minValue" class="ng-binding">11</span>
+                            </span>
+                        </div>
+                    </div><!-- end ngIf: offerGroup.displayItem.ineligibilityReasons.length === 0 -->
+                    <!-- ngIf: offerGroup.displayItem.ineligibilityReasons.length > 0 -->
+                </div><!-- end ngIf: offerGroup.displayItem.dealQuantity.isEditable -->
+                
+                <!-- ngIf: !offerGroup.displayItem.dealQuantity.isEditable -->
+            </td>
+            
+            <td class="text-right">
+                <div data-ng-bind="offerGroup.displayItem.dealPotential | currency" class="ng-binding">$507.98</div>
+                <div class="sm-table-supplemental-heading ng-binding" data-ng-bind="offerGroup.displayItem.discount | currency">$151.80</div>
+            </td>
+        </tr>
+
+        
+        <!-- ngRepeat: item in offerGroup.items | orderBy:'item.ineligibilityReasons.length' --><!-- ngIf: offerGroup.items.length > 1 --><!-- end ngRepeat: item in offerGroup.items | orderBy:'item.ineligibilityReasons.length' -->
+
+    </tbody>
