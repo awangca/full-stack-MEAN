@@ -3,8 +3,58 @@
 <head>
 	<title></title>
 	<script type="text/javascript" src="jquery-3.2.1.js"></script>
-	<link rel="stylesheet" type="text/css" href="12-jq.css">
-	
+<!-- 	<link rel="stylesheet" type="text/css" href="12-jq.css"> -->
+	<style type="text/css">
+		 * {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .wrapper {
+            width: 298px;
+            height: 248px;
+            margin: 100px auto 0;
+            border: 1px solid pink;
+            overflow: hidden;
+        }
+
+        #left, #center, #right {
+            float: left;
+        }
+
+        #left li, #right li {
+            background: url(images/lili.jpg) repeat-x;
+        }
+
+        #left li a, #right li a {
+            display: block;
+            width: 48px;
+            height: 27px;
+            border-bottom: 1px solid pink;
+            line-height: 27px;
+            text-align: center;
+            color: black;
+        }
+
+        #left li a:hover, #right li a:hover {
+            background-image: url(images/abg.gif);
+        }
+
+        #center {
+            border-left: 1px solid pink;
+            border-right: 1px solid pink;
+        }
+	</style>
+
 	<script type="text/javascript">
 			// jQuery(function(){
 
@@ -15,7 +65,7 @@
 
 
 
-		});
+		// });
 	</script>
 </head>
 <body>
